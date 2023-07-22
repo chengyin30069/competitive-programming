@@ -56,8 +56,7 @@ void file()
 }
 void solve()
 {
-	int n;cin>>n;
-	while(n--)cout<<"test\n";
+	
 }
 signed main()
 {
