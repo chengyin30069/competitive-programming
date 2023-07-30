@@ -1,3 +1,40 @@
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+"Plugin 'itchyny/lightline.vim'
+
+Plugin 'scrooloose/nerdtree'
+
+Plugin 'tpope/vim-commentary'
+
+Plugin 'mhinz/vim-startify'
+
+Plugin 'vim-airline/vim-airline'
+
+Plugin 'vim-airline/vim-airline-themes'
+
+call vundle#end()            " required
+filetype plugin indent on
+
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ }
+
+let g:airline#extensions#tabline#enabled = 1
+
+let g:airline#extensions#tabline#left_sep = ' '
+
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+let g:airline_theme='wombat'
+
+
+
 "general setting
 set number
 set relativenumber
@@ -37,10 +74,10 @@ nnoremap <C-a> ggvG$
 "tab navigation
 nnoremap <tab> gt
 nnoremap <S-tab> gT
-inoremap <C-t> <Esc>:vnew<CR>
-nnoremap <C-t> :vnew<CR>
-inoremap <C-n> <Esc>:tabnew<CR>
-nnoremap <C-n> :tabnew<CR>
+inoremap <C-t> <Esc>:vnew<CR>:Startify<CR>
+nnoremap <C-t> :vnew<CR>:Startify<CR>
+inoremap <C-n> <Esc>:tabnew<CR>:Startify<CR>
+nnoremap <C-n> :tabnew<CR>:Startify<CR>
 
 "gaming arrow keys
 nnoremap w k
