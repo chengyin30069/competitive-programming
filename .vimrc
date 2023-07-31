@@ -50,6 +50,7 @@ set laststatus=2
 set cmdheight=2
 set clipboard=unnamedplus
 set guifont=Hack:h20
+set showcmd
 
 "keybinds
 inoremap ( ()<Esc>i
@@ -64,6 +65,8 @@ inoremap <C-w> <Esc>:wq<CR>
 nnoremap <C-w> :wq<CR>
 inoremap <C-q> <Esc>:q<CR>
 nnoremap <C-q> :q<CR>
+inoremap <C-f> <Esc>:NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeToggle<CR>
 
 "select all&copy paste
 vmap <C-c> "+y
