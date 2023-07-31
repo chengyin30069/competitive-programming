@@ -47,7 +47,6 @@ int fpow(int x,int y,int mod){
 	return w;
 }
 mt19937 ran(random_device{}());
-#define local
 void file()
 {
 #ifdef local
@@ -58,6 +57,7 @@ void solve()
 {
 	
 }
+//g++ -O0 -std=c++17 -Wall -Wextra -Dlocal template.cpp -o out
 signed main()
 {
 	Yuubari_chan_kawaii
