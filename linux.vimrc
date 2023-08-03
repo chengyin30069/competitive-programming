@@ -21,9 +21,9 @@ Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()            " required
 filetype plugin indent on
 
-let g:lightline = {
-      \ 'colorscheme': 'solarized',
-      \ }
+" let g:lightline = {
+"       \ 'colorscheme': 'solarized',
+"       \ }
 
 let g:airline#extensions#tabline#enabled = 1
 
@@ -32,8 +32,6 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
 let g:airline_theme='wombat'
-
-
 
 "general setting
 set number
@@ -50,7 +48,6 @@ set laststatus=2
 set cmdheight=2
 set clipboard=unnamedplus
 set guifont=Hack:h20
-set showcmd
 
 "keybinds
 inoremap ( ()<Esc>i
