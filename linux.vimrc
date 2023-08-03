@@ -6,8 +6,6 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-"Plugin 'itchyny/lightline.vim'
-
 Plugin 'scrooloose/nerdtree'
 
 Plugin 'tpope/vim-commentary'
@@ -18,18 +16,11 @@ Plugin 'vim-airline/vim-airline'
 
 Plugin 'vim-airline/vim-airline-themes'
 
-call vundle#end()            " required
+call vundle#end()
+
 filetype plugin indent on
 
-" let g:lightline = {
-"       \ 'colorscheme': 'solarized',
-"       \ }
-
 let g:airline#extensions#tabline#enabled = 1
-
-let g:airline#extensions#tabline#left_sep = ' '
-
-let g:airline#extensions#tabline#left_alt_sep = '|'
 
 let g:airline_theme='wombat'
 
