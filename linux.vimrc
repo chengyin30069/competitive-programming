@@ -16,6 +16,8 @@ Plugin 'vim-airline/vim-airline'
 
 Plugin 'vim-airline/vim-airline-themes'
 
+Plugin 'flazz/vim-colorschemes'
+
 call vundle#end()
 
 filetype plugin indent on
@@ -79,6 +81,10 @@ vnoremap w k
 vnoremap a h
 vnoremap s j
 vnoremap d l
+
+" Compile and run
+inoremap <C-b> <Esc>:!g++ -O0 -std=c++17 -Wall -Wextra -Dlocal % -o out &&./out<CR>
+nnoremap <C-b> :!g++ -O0 -std=c++17 -Wall -Wextra -Dlocal % -o out &&./out<CR>
 
 "theme
 syntax on
