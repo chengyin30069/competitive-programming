@@ -32,7 +32,7 @@ set ruler
 set laststatus=2
 set cmdheight=2
 set clipboard=unnamedplus
-set guifont=Hack:h18
+set guifont=Hack:h17
 set showcmd
 
 "keybinds
@@ -75,27 +75,13 @@ vnoremap a h
 vnoremap s j
 vnoremap d l
 
+" Compile and run
+inoremap <C-b> <Esc>:w<CR>:!g++ -O0 -std=c++17 -Wall -Wextra -Dlocal % -o out && out<CR>
+nnoremap <C-b> :w<CR>:!g++ -O0 -std=c++17 -Wall -Wextra -Dlocal % -o out && out<CR>
+
 "theme
 syntax on
 colorscheme one
 set filetype=cpp
 set background=dark
-""hi Normal ctermfg=white ctermbg=black
-
-"cursor settings
-"&t_SI for insertmode
-"&t_EI for others
-" Using iTerm5? Go-to preferences / profile / colors and disable the smart bar
-" cursor color. Then pick a cursor and highlight color that matches your theme.
-" That will ensure your cursor is always visible within insert mode.
-"
-" Reference chart of values:
-"   Ps = 0  -> blinking block.
-"   Ps = 1  -> blinking block (default).
-"   Ps = 2  -> steady block.
-"   Ps = 3  -> blinking underline.
-"   Ps = 4  -> steady underline.
-"   Ps = 5  -> blinking bar (xterm).
-"   Ps = 6  -> steady bar (xterm).
-let &t_SI="\e[2 q"
-let &t_EI="\e[2 q"
+hi Normal ctermfg=white ctermbg=black
