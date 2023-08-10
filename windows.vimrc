@@ -10,6 +10,8 @@ Plug 'vim-airline/vim-airline'
 
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'flazz/vim-colorschemes'
+
 call plug#end()
 
 let g:airline#extensions#tabline#enabled = 1
