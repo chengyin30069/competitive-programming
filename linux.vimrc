@@ -18,6 +18,10 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'flazz/vim-colorschemes'
 
+Plugin 'tribela/vim-transparent'
+
+Plugin 'vimsence/vimsence'
+
 call vundle#end()
 
 filetype plugin indent on
@@ -41,6 +45,7 @@ set laststatus=2
 set cmdheight=2
 set clipboard=unnamedplus
 set guifont=Hack:h20
+set showcmd
 
 "keybinds
 inoremap ( ()<Esc>i
@@ -49,12 +54,6 @@ inoremap [ []<Esc>i
 inoremap ' ''<Esc>i
 inoremap { {<CR>}<Esc>ko
 inoremap } {}<Esc>i
-inoremap <C-s> <Esc>:w<CR>
-nnoremap <C-s> :w<CR>
-inoremap <C-w> <Esc>:wq<CR>
-nnoremap <C-w> :wq<CR>
-inoremap <C-q> <Esc>:q<CR>
-nnoremap <C-q> :q<CR>
 inoremap <C-f> <Esc>:NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeToggle<CR>
 
@@ -71,20 +70,11 @@ inoremap <C-t> <Esc>:vnew<CR>:Startify<CR>
 nnoremap <C-t> :vnew<CR>:Startify<CR>
 inoremap <C-n> <Esc>:tabnew<CR>:Startify<CR>
 nnoremap <C-n> :tabnew<CR>:Startify<CR>
-
-"gaming arrow keys
-nnoremap w k
-nnoremap a h
-nnoremap s j
-nnoremap d l
-vnoremap w k
-vnoremap a h
-vnoremap s j
-vnoremap d l
+nnoremap <C-r> ggvG$d:r template.cpp<CR>
 
 " Compile and run
-inoremap <C-b> <Esc>:!g++ -O0 -std=c++17 -Wall -Wextra -Dlocal % -o out &&./out<CR>
-nnoremap <C-b> :!g++ -O0 -std=c++17 -Wall -Wextra -Dlocal % -o out &&./out<CR>
+inoremap <F9> <Esc>:w<CR>:!g++ -O0 -std=c++17 -Wall -Wextra -Dlocal % -o out &&./out<CR>
+nnoremap <F9> :w<CR>:!g++ -O0 -std=c++17 -Wall -Wextra -Dlocal % -o out &&./out<CR>
 
 "theme
 syntax on
