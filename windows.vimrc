@@ -16,7 +16,7 @@ call plug#end()
 
 let g:airline#extensions#tabline#enabled = 1
 
-let g:airline_theme='wombat'
+let g:airline_theme='solarized'
 
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
@@ -34,8 +34,14 @@ set ruler
 set laststatus=2
 set cmdheight=2
 set clipboard=unnamedplus
-set guifont=Hack:h17
+set guifont=Hack:h16
 set showcmd
+set guioptions -=m 
+set guioptions -=T
+set belloff=all
+" set nowrap
+filetype indent on
+au GUIEnter * sim ~x
 
 "keybinds
 inoremap ( ()<Esc>i
@@ -44,12 +50,6 @@ inoremap [ []<Esc>i
 inoremap ' ''<Esc>i
 inoremap { {<CR>}<Esc>ko
 inoremap } {}<Esc>i
-inoremap <C-s> <Esc>:w<CR>
-nnoremap <C-s> :w<CR>
-inoremap <C-w> <Esc>:wq<CR>
-nnoremap <C-w> :wq<CR>
-inoremap <C-q> <Esc>:q<CR>
-nnoremap <C-q> :q<CR>
 inoremap <C-f> <Esc>:NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeToggle<CR>
 
@@ -66,24 +66,16 @@ inoremap <C-t> <Esc>:vnew<CR>:Startify<CR>
 nnoremap <C-t> :vnew<CR>:Startify<CR>
 inoremap <C-n> <Esc>:tabnew<CR>:Startify<CR>
 nnoremap <C-n> :tabnew<CR>:Startify<CR>
-
-"gaming arrow keys
-nnoremap w k
-nnoremap a h
-nnoremap s j
-nnoremap d l
-vnoremap w k
-vnoremap a h
-vnoremap s j
-vnoremap d l
+nnoremap <C-r> ggvG$d:r template.cpp<CR>:w<CR>
 
 " Compile and run
-inoremap <C-b> <Esc>:w<CR>:!g++ -O0 -std=c++17 -Wall -Wextra -Dlocal % -o out && out<CR>
-nnoremap <C-b> :w<CR>:!g++ -O0 -std=c++17 -Wall -Wextra -Dlocal % -o out && out<CR>
+inoremap <F9> <Esc>:w<CR>:!g++ -O0 -std=c++17 -Wall -Wextra -Dlocal % -o out && out<CR>
+nnoremap <F9> :w<CR>:!g++ -O0 -std=c++17 -Wall -Wextra -Dlocal % -o out && out<CR>
 
 "theme
 syntax on
-colorscheme one
+"ayu gruvbox one codeblocks_dark monokai-chris monokai-phoenix neon neodark py-darcula spacegray vim-material void
+colorscheme ayu
 set filetype=cpp
 set background=dark
 hi Normal ctermfg=white ctermbg=black
