@@ -57,7 +57,6 @@ void solve()
 {
 	
 }
-//g++ -O0 -std=c++17 -Wall -Wextra -Dlocal template.cpp -o out
 signed main()
 {
 	Yuubari_chan_kawaii
