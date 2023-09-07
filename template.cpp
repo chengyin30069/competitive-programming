@@ -51,6 +51,14 @@ void file()
 {
 #ifdef local
 	freopen("in.txt","r",stdin);
+	cout<<"Output:\n\n";
+	srand(time(NULL));
+#endif
+}
+void outTime()
+{
+#ifdef local
+	cout<<"\n\ntime:"<<clock()<<"\n";
 #endif
 }
 void solve()
@@ -62,6 +70,7 @@ signed main()
 	Yuubari_chan_kawaii
 	file();
 	solve();
+	outTime();
 }
 /*
 
