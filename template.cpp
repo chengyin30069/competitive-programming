@@ -36,16 +36,7 @@ template<class T>using inset=tree<T,null_type,less<T>,rb_tree_tag,tree_order_sta
 template<class T,class TT>using fm=gp_hash_table<T,TT>;
 template<class T>void output(const T&hs){for(auto i:hs)cout<<i<<" ";cout<<endl;}
 template<class T>void outpair(const T&hs){for(auto i:hs)cout<<i.F<<" "<<i.S<<endl;cout<<endl;}
-int gcd(int x,int y){return y?gcd(y,x%y):x;}
 const int Mod1=1000000007,Mod2=998244353,N=2e5+10;
-int fpow(int x,int y,int mod){
-	if(y==0)return 1;
-	if(y==1)return x;
-	int z=fpow(x,y/2,mod);
-	int w=(z*z)%mod;
-	if(y%2==1)return (w*x)%mod;
-	return w;
-}
 mt19937 ran(random_device{}());
 void file()
 {
