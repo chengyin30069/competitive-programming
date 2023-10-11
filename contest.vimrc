@@ -26,8 +26,8 @@ nnoremap <C-t> :vnew<CR>
 inoremap <C-n> <Esc>:tabnew<CR>
 nnoremap <C-n> :tabnew<CR>
 
-inoremap <F9> <Esc>:w<CR>:!g++ -O0 -std=c++17 -Wall -Wextra -Dlocal % -o out && out<CR>
-nnoremap <F9> :w<CR>:!g++ -O0 -std=c++17 -Wall -Wextra -Dlocal % -o out && out<CR>
+inoremap <F9> <Esc>:w<CR>:!~/runcpp.sh %:p:t %:p:h<CR>
+nnoremap <F9> :w<CR>:!~/runcpp.sh %:p:t %:p:h<CR>
 
 syntax on
 colorscheme desert
