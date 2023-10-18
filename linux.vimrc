@@ -28,7 +28,7 @@ filetype plugin indent on
 
 let g:airline#extensions#tabline#enabled = 1
 
-let g:airline_theme='wombat'
+let g:airline_theme='solarized'
 
 "general setting
 set number
@@ -70,16 +70,21 @@ inoremap <C-t> <Esc>:vnew<CR>:Startify<CR>
 nnoremap <C-t> :vnew<CR>:Startify<CR>
 inoremap <C-n> <Esc>:tabnew<CR>:Startify<CR>
 nnoremap <C-n> :tabnew<CR>:Startify<CR>
-nnoremap <C-r> ggvG$d:r template.cpp<CR>
 
 " Compile and run
-inoremap <F9> <Esc>:w<CR>:!g++ -O0 -std=c++17 -Wall -Wextra -Dlocal % -o out &&./out<CR>
-nnoremap <F9> :w<CR>:!g++ -O0 -std=c++17 -Wall -Wextra -Dlocal % -o out &&./out<CR>
+inoremap <F9> <Esc>:w<CR>:!runcpp.sh %:p:t %:p:h<CR>
+nnoremap <F9> :w<CR>:!runcpp.sh %:p:t %:p:h<CR>
+inoremap <F8> <Esc>:w<CR>:!runc.sh %:p:t %:p:h<CR>
+nnoremap <F8> :w<CR>:!runc.sh %:p:t %:p:h<CR>
+
+"Run only
+inoremap <F5> <Esc>:!output.sh %:p:h<CR>
+nnoremap <F5> :!output.sh %:p:h<CR>
 
 "theme
 syntax on
-colorscheme one
-set filetype=cpp
+colorscheme vim-material
+set filetype=on
 set background=dark
 hi Normal ctermfg=white ctermbg=black
 
