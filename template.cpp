@@ -12,7 +12,6 @@ My waifu~~<3
 
 */
 #include<bits/stdc++.h>
-#include<bits/extc++.h>
 #define int long long
 #define float double
 #define F first
@@ -30,38 +29,18 @@ My waifu~~<3
 #define sz(x) (int)(x.size())
 #define Yuubari_chan_kawaii ios::sync_with_stdio(0),cin.tie(0),cout.tie(0);
 using namespace std;
-using namespace __gnu_pbds;
-template<class T>using deset=tree<T,null_type,greater<T>,rb_tree_tag,tree_order_statistics_node_update>;
-template<class T>using inset=tree<T,null_type,less<T>,rb_tree_tag,tree_order_statistics_node_update>;
-template<class T,class TT>using fm=gp_hash_table<T,TT>;
 template<class T>void output(const T&hs){for(auto i:hs)cout<<i<<" ";cout<<endl;}
 template<class T>void outpair(const T&hs){for(auto i:hs)cout<<i.F<<" "<<i.S<<endl;cout<<endl;}
 const int Mod1=1000000007,Mod2=998244353,N=2e5+10;
 mt19937 ran(random_device{}());
-void file()
-{
-#ifdef local
-	freopen("in.txt","r",stdin);
-	cout<<"Output:\n\n";
-	srand(time(NULL));
-#endif
-}
-void outTime()
-{
-#ifdef local
-	cout<<"\n\ntime:"<<clock()<<"\n";
-#endif
-}
 void solve()
 {
-	
+
 }
 signed main()
 {
 	Yuubari_chan_kawaii
-	file();
 	solve();
-	outTime();
 }
 /*
 
