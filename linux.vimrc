@@ -72,14 +72,14 @@ inoremap <C-n> <Esc>:tabnew<CR>:Startify<CR>
 nnoremap <C-n> :tabnew<CR>:Startify<CR>
 
 " Compile and run
-inoremap <F9> <Esc>:w<CR>:!./runcpp.sh %:p:t %:p:h<CR>
-nnoremap <F9> :w<CR>:!./runcpp.sh %:p:t %:p:h<CR>
-inoremap <F8> <Esc>:w<CR>:!./runc.sh %:p:t %:p:h<CR>
-nnoremap <F8> :w<CR>:!./runc.sh %:p:t %:p:h<CR>
+inoremap <F9> <Esc>:w<CR>:!~/runcpp.sh %:p:t %:p:h<CR>
+nnoremap <F9> :w<CR>:!~/runcpp.sh %:p:t %:p:h<CR>
+inoremap <F8> <Esc>:w<CR>:!~/runc.sh %:p:t %:p:h<CR>
+nnoremap <F8> :w<CR>:!~/runc.sh %:p:t %:p:h<CR>
 
 "Run only
-inoremap <F5> <Esc>:!./output.sh %:p:h<CR>
-nnoremap <F5> :!./output.sh %:p:h<CR>
+inoremap <F5> <Esc>:!~/output.sh %:p:h<CR>
+nnoremap <F5> :!~/output.sh %:p:h<CR>
 
 "theme
 syntax on
