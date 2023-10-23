@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 clear
 echo "Input file:"
 echo
