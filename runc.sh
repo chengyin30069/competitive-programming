@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 clear
 echo "Start compiling $1..."
 echo
