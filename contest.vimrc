@@ -12,7 +12,6 @@ inoremap " ""<Esc>i
 inoremap [ []<Esc>i
 inoremap ' ''<Esc>i
 inoremap { {<CR>}<Esc>ko
-inoremap } {}<Esc>i
 
 vmap <C-c> "+y
 inoremap <C-v> <Esc>p
