@@ -49,7 +49,6 @@ inoremap " ""<Esc>i
 inoremap [ []<Esc>i
 inoremap ' ''<Esc>i
 inoremap { {<CR>}<Esc>ko
-inoremap } {}<Esc>i
 inoremap <C-f> <Esc>:NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeToggle<CR>
 
