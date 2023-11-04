@@ -45,6 +45,7 @@ set laststatus=2
 set cmdheight=2
 set clipboard=unnamedplus
 set guifont=Hack:h20
+set autoread
 set showcmd
 
 "keybinds
