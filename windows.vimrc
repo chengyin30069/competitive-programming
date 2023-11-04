@@ -39,6 +39,7 @@ set showcmd
 set guioptions -=m 
 set guioptions -=T
 set belloff=all
+set autoread
 " set nowrap
 filetype indent on
 au GUIEnter * sim ~x
