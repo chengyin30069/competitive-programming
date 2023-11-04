@@ -1,7 +1,7 @@
 set number relativenumber ai t_Co=256 tabstop=4
 set mouse=a shiftwidth=4 encoding=utf8
 set bs=2 ruler laststatus=2 cmdheight=2
-set clipboard=unnamedplus showcmd
+set clipboard=unnamedplus showcmd autoread
 set belloff=all
 filetype indent on
 set guifont Hack:h16
