@@ -40,6 +40,7 @@ set guioptions -=m
 set guioptions -=T
 set belloff=all
 set autoread
+set ma
 " set nowrap
 filetype indent on
 au GUIEnter * sim ~x
@@ -58,6 +59,7 @@ vmap <C-c> "+y
 inoremap <C-v> <Esc>p
 nnoremap <C-v> p
 nnoremap <C-a> ggvG$
+nnoremap <C-r> :o a.cpp<CR><C-w>v<C-w>w:o out.txt<CR><C-w>s:o in.txt<CR>
 
 "tab navigation
 nnoremap <tab> gt
@@ -66,16 +68,20 @@ inoremap <C-t> <Esc>:vnew<CR>:Startify<CR>
 nnoremap <C-t> :vnew<CR>:Startify<CR>
 inoremap <C-n> <Esc>:tabnew<CR>:Startify<CR>
 nnoremap <C-n> :tabnew<CR>:Startify<CR>
-nnoremap <C-r> ggvG$d:r template.cpp<CR>:w<CR>
 
 " Compile and run
-inoremap <F9> <Esc>:w<CR>:!g++ -O0 -std=c++17 -Wall -Wextra -Dlocal % -o out && out<CR>
-nnoremap <F9> :w<CR>:!g++ -O0 -std=c++17 -Wall -Wextra -Dlocal % -o out && out<CR>
+inoremap <F9> <Esc>:w<CR>:!g++ -O0 -std=c++20 -Wall -Wextra -Wshadow % -o out && out < in.txt > out.txt<CR>
+nnoremap <F9> :w<CR>:!g++ -O0 -std=c++20 -Wall -Wextra -Wshadow % -o out && out < in.txt > out.txt<CR>
+inoremap <F8> <Esc>:w<CR>:!gcc -O0 -std=c17 -Wall -Wextra -Wshadow % -o out && out < in.txt > out.txt<CR>
+nnoremap <F8> :w<CR>:!gcc -O0 -std=c17 -Wall -Wextra -Wshadow % -o out && out < in.txt > out.txt<CR>
+
+inoremap <F5> <Esc>:!out < in.txt > out.txt<CR>
+nnoremap <F5> :!out < in.txt > out.txt<CR>
+
 
 "theme
 syntax on
 "ayu gruvbox one codeblocks_dark monokai-chris monokai-phoenix neon neodark py-darcula spacegray vim-material void
-colorscheme ayu
-set filetype=cpp
+colorscheme spacegray 
 set background=dark
 hi Normal ctermfg=white ctermbg=black
