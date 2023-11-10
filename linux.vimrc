@@ -22,13 +22,17 @@ Plugin 'tribela/vim-transparent'
 
 Plugin 'vimsence/vimsence'
 
+Plugin 'christoomey/vim-tmux-navigator'
+
 call vundle#end()
 
 filetype plugin indent on
 
 let g:airline#extensions#tabline#enabled = 1
 
-let g:airline_theme='solarized'
+let g:airline_theme='angr'
+
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 "general setting
 set number
@@ -45,7 +49,6 @@ set laststatus=2
 set cmdheight=2
 set clipboard=unnamedplus
 set guifont=Hack:h20
-set autoread
 set showcmd
 
 "keybinds
@@ -54,6 +57,7 @@ inoremap " ""<Esc>i
 inoremap [ []<Esc>i
 inoremap ' ''<Esc>i
 inoremap { {<CR>}<Esc>ko
+inoremap } {}<Esc>i
 inoremap <C-f> <Esc>:NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeToggle<CR>
 
@@ -70,21 +74,22 @@ inoremap <C-t> <Esc>:vnew<CR>:Startify<CR>
 nnoremap <C-t> :vnew<CR>:Startify<CR>
 inoremap <C-n> <Esc>:tabnew<CR>:Startify<CR>
 nnoremap <C-n> :tabnew<CR>:Startify<CR>
+nnoremap <C-Left> <C-w><
+nnoremap <C-Right> <C-w>>
+nnoremap <C-Up> <C-w>-
+nnoremap <C-Down> <C-w>+
 
 " Compile and run
 inoremap <F9> <Esc>:w<CR>:!~/runcpp.sh %:p:t %:p:h<CR>
 nnoremap <F9> :w<CR>:!~/runcpp.sh %:p:t %:p:h<CR>
-inoremap <F8> <Esc>:w<CR>:!~/runc.sh %:p:t %:p:h<CR>
-nnoremap <F8> :w<CR>:!~/runc.sh %:p:t %:p:h<CR>
-
-"Run only
-inoremap <F5> <Esc>:!~/output.sh %:p:h<CR>
-nnoremap <F5> :!~/output.sh %:p:h<CR>
+inoremap <F8> <Esc>:w<CR>:!~/runc.sh %<CR>
+nnoremap <F8> :w<CR>:!~/runc.sh %<CR>
 
 "theme
 syntax on
+"ayu gruvbox one codeblocks_dark monokai-chris monokai-phoenix neon neodark py-darcula spacegray vim-material void
 colorscheme vim-material
-set filetype=on
+set filetype=cpp
 set background=dark
 hi Normal ctermfg=white ctermbg=black
 
