@@ -12,6 +12,8 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'flazz/vim-colorschemes'
 
+Plug 'bfrg/vim-cpp-modern'
+
 call plug#end()
 
 let g:airline#extensions#tabline#enabled = 1
@@ -59,7 +61,6 @@ vmap <C-c> "+y
 inoremap <C-v> <Esc>p
 nnoremap <C-v> p
 nnoremap <C-a> ggvG$
-nnoremap <C-r> :o a.cpp<CR><C-w>v<C-w>w:o out.txt<CR><C-w>s:o in.txt<CR>
 
 "tab navigation
 nnoremap <tab> gt
@@ -72,11 +73,6 @@ nnoremap <C-n> :tabnew<CR>:Startify<CR>
 " Compile and run
 inoremap <F9> <Esc>:w<CR>:!g++ -O0 -std=c++20 -Wall -Wextra -Wshadow % -o out && out < in.txt > out.txt<CR>
 nnoremap <F9> :w<CR>:!g++ -O0 -std=c++20 -Wall -Wextra -Wshadow % -o out && out < in.txt > out.txt<CR>
-inoremap <F8> <Esc>:w<CR>:!gcc -O0 -std=c17 -Wall -Wextra -Wshadow % -o out && out < in.txt > out.txt<CR>
-nnoremap <F8> :w<CR>:!gcc -O0 -std=c17 -Wall -Wextra -Wshadow % -o out && out < in.txt > out.txt<CR>
-
-inoremap <F5> <Esc>:!out < in.txt > out.txt<CR>
-nnoremap <F5> :!out < in.txt > out.txt<CR>
 
 
 "theme

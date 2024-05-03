@@ -24,6 +24,8 @@ Plugin 'vimsence/vimsence'
 
 Plugin 'christoomey/vim-tmux-navigator'
 
+Plugin 'bfrg/vim-cpp-modern'
+
 call vundle#end()
 
 filetype plugin indent on
@@ -82,8 +84,6 @@ nnoremap <C-Down> <C-w>+
 " Compile and run
 inoremap <F9> <Esc>:w<CR>:!~/runcpp.sh %:p:t %:p:h<CR>
 nnoremap <F9> :w<CR>:!~/runcpp.sh %:p:t %:p:h<CR>
-inoremap <F8> <Esc>:w<CR>:!~/runc.sh %<CR>
-nnoremap <F8> :w<CR>:!~/runc.sh %<CR>
 
 "theme
 syntax on
