@@ -32,7 +32,7 @@ using namespace std;
 template<class T>void output(const T&hs){for(auto i:hs)cout<<i<<" ";cout<<endl;}
 template<class T>void outpair(const T&hs){for(auto i:hs)cout<<i.F<<" "<<i.S<<endl;cout<<endl;}
 const int Mod1=1000000007,Mod2=998244353,N=2e5+10;
-mt19937 ran(random_device{}());
+mt19937 rng(random_device{}());
 void solve()
 {
 
