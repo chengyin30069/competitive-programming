@@ -2,7 +2,7 @@
 clear
 echo "Start compiling $1..."
 echo
-g++ -O0 -std=c++20 -Wall -Wextra -Wshadow $2/$1 -o $2/out
+g++ -O2 -std=c++20 -Wall -Wextra -Wshadow $2/$1 -o $2/out
 if [ "$?" -ne 0 ]
 then
     exit 1

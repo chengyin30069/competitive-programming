@@ -76,10 +76,6 @@ inoremap <C-t> <Esc>:vnew<CR>:Startify<CR>
 nnoremap <C-t> :vnew<CR>:Startify<CR>
 inoremap <C-n> <Esc>:tabnew<CR>:Startify<CR>
 nnoremap <C-n> :tabnew<CR>:Startify<CR>
-nnoremap <C-Left> <C-w><
-nnoremap <C-Right> <C-w>>
-nnoremap <C-Up> <C-w>-
-nnoremap <C-Down> <C-w>+
 
 " Compile and run
 inoremap <F9> <Esc>:w<CR>:!~/runcpp.sh %:p:t %:p:h<CR>
