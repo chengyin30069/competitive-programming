@@ -27,6 +27,8 @@ nnoremap <C-n> :tabnew<CR>
 
 inoremap <F9> <Esc>:w<CR>:!~/runcpp.sh %:p:t %:p:h<CR>
 nnoremap <F9> :w<CR>:!~/runcpp.sh %:p:t %:p:h<CR>
+"inoremap <F9> <Esc>:w<CR>:!~/exec.sh %
+"nnoremap <F9> :w<CR>:!~/exec.sh %
 
 syntax on
 colorscheme desert
